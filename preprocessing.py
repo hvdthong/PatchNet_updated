@@ -170,10 +170,3 @@ def mini_batches(X_msg, X_added_code, X_removed_code, Y, mini_batch_size=64, see
         mini_batch = (mini_batch_X_msg, mini_batch_X_added, mini_batch_X_removed, mini_batch_Y)
         mini_batches.append(mini_batch)
     return mini_batches
-
-
-if __name__ == "__main__":    
-    path_data = "./data/linux/newres_funcalls_words_jul28.out"
-    commits_ = extract_commit(path_file=path_data)
-    nfile, nhunk, nloc, nleng = 2, 5, 10, 120
-    new_commits = reformat_commit_code(commits=commits_, num_file=nfile, num_hunk=nhunk, num_loc=nloc, num_leng=nleng)
